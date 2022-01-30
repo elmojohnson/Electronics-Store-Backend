@@ -82,7 +82,7 @@ router.get("/account", authToken, async (req, res) => {
     if(user) {
         res.status(200).json({name: user.name, username: user.username, joined_last: user.createdAt})
     } else {
-        res.status(500).json({error: true, msg: "Account does not exist"})
+        res.status(500).json({error: true, msg: "Account does not exist."})
     }
 });
 
